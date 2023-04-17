@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <title>유저 - 공지 게시판 글조회</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR%3A100%2C300%2C500%2C700" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A100%2C300%2C400%2C500%2C600%2C700" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans%3A700" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto%3A400%2C500%2C600" />
+    <link rel="stylesheet" href="/styles/user_n_read.css" />
+
+</head>
+
+<body>
+    <div class="usernboard-gY8">
+
+        <!-- header 반복 -->
+        <%- include('includes/userheader', {session:session})%>
+        <!-- header 반복 -->
+
+        <div class="auto-group-tkd6-yDi">
+            <div class="div-UgG">
+                <div class="item--QK2">공지 게시판</div>
+                <div class="board_wrap">
+                    <div class="board_view_wrap">
+                        <div class="board_view">
+                            <div class="title">
+                                <%=board[1]%>
+                            </div>
+                            <div class="info">
+                                <dl>
+                                    <dt>번호</dt>
+                                    <dd><%=board[0]%></dd>
+                                </dl>
+                                <dl>
+                                    <dt>글쓴이</dt>
+                                    <dd><%=board[4]%></dd>
+                                </dl>
+                                <dl>
+                                    <dt>작성일</dt>
+                                    <%
+                                    board[3] = String(board[3]);
+                                    board[3] = board[3].substr(3, 21);
+                                    %>
+                                    <dd><%=board[3]%></dd>
+                                </dl>
+                            </div>
+                            <div class="cont">
+                                <%=board[2]%>
+                            </div>
+                        </div>
+                        <div class="bt_wrap">
+                            <a href="/usernboard" style="text-decoration: none;" class="on">목록</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="auto-group-cma8-D7v">
+        <div class="div-Zha">
+            <div class="item-1-sCU"></div>
+
+
+            <!-- footer 반복 -->
+            <%- include('includes/userfooter') %>
+            <!-- footer 반복 -->
+
+
+        </div>
+    </div>
+    </div>
+
+</body>
+
+</html>

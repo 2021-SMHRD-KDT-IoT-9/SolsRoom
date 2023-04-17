@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <title>유저 - 건의 게시판 글쓰기</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR%3A100%2C300%2C500%2C700" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A100%2C300%2C400%2C500%2C600%2C700" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans%3A700" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto%3A400%2C500%2C600" />
+  <link rel="stylesheet" href="./styles/userqboardw.css" />
+
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+  <script src="/js/jquery-3.6.4.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link href="/assets/summernote-0.8.18-dist/summernote.min.css" rel="stylesheet">
+  <script src="/assets/summernote-0.8.18-dist/summernote.min.js"></script>
+
+</head>
+
+<body>
+  <div class="usernboard-gY8">
+
+    <!-- header 반복 -->
+    <%- include('includes/userheader', {session:session})%>
+      <!-- header 반복 -->
+
+      <div class="auto-group-tkd6-yDi">
+        <div class="div-UgG">
+          <div class="item--QK2">건의 게시판</div>
+          <form action="/userqboardw" method="post">
+            <div class="board_write_wrap">
+              <div class="board_write">
+                <div class="title">
+                  <dl id="fst_dl">
+                    <dd><input class="inputtitle" name="title" type="text" placeholder="제목을 적어주세요"></dd>
+                  </dl>
+                  <div class="info">
+                  </div>
+                  <div class="cont">
+                    <textarea id="summernote" name="editordata"></textarea>
+                  </div>
+                </div>
+                <div class="bt_wrap">
+                  <button type="submit" class="on">완료</button>
+                  <a class="wrap_a" href="/userqboard">취소</a>
+                </div>
+              </div>
+              <div class="frame-15-XyJ"></div>
+            </div>
+          </form>
+        </div>
+      </div>
+  </div>
+  <div class="auto-group-cma8-D7v">
+    <div class="div-Zha">
+      <div class="item-1-sCU"></div>
+
+      <!-- footer 반복 -->
+      <%- include('includes/userfooter') %>
+        <!-- footer 반복 -->
+
+    </div>
+  </div>
+  </div>
+  <script>
+    $(document).ready(function () {
+      $('#summernote').summernote({
+        disableResizeEditor: true,
+        height: 350
+      });
+    });
+  </script>
+</body>
+
+</html>

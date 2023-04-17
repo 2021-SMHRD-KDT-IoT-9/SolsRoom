@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <title>관리자 - 건의 게시판 글조회</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR%3A100%2C300%2C400%2C700" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A100%2C300%2C400%2C500%2C700" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto%3A500" />
+  <link rel="stylesheet" href="/styles/con_q_read.css" />
+
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+  <script src="/js/jquery-3.6.4.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link href="/assets/summernote-0.8.18-dist/summernote.min.css" rel="stylesheet">
+  <script src="/assets/summernote-0.8.18-dist/summernote.min.js"></script>
+
+</head>
+
+<body>
+  <div class="connboard-YSc">
+    
+          <!-- header 반복 -->
+    <%- include('includes/conheader') %>
+          <!-- header 반복 -->
+
+
+    <div class="div-fjW">
+      <div class="div-oqi">
+        <div class="div-LKr">건의 게시판</div>
+        <div class="board_wrap">
+          <div class="board_view_wrap">
+              <div class="board_view">
+                  <div class="title">
+                      <%=board[1]%>
+                  </div>
+                  <div class="info">
+                      <dl>
+                          <dt>번호</dt>
+                          <dd><%=board[0]%></dd>
+                      </dl>
+                      <dl>
+                          <dt>글쓴이</dt>
+                          <dd><%=board[4]%></dd>
+                      </dl>
+                      <dl>
+                          <dt>작성일</dt>
+                          <%
+                          board[3] = String(board[3]);
+                          board[3] = board[3].substr(3, 21);
+                          %>
+                          <dd><%=board[3]%></dd>
+                      </dl>
+                  </div>
+                  <div class="cont">
+                    <%=board[2]%>
+                  </div>
+              </div>
+              <div class="bt_wrap">
+                <a href="/conqboard" class="on">목록</a>
+                <a href="/conqboard">삭제</a>
+              </div>
+              
+          </div>
+      </div>
+      </div>
+
+
+            <!-- footer 반복 -->
+            <%- include('includes/confooter') %>
+            <!-- footer 반복 -->
+
+
+    </div>
+  </div>
+  <script>
+    $(document).ready(function () {
+      $('#summernote').summernote({
+        disableResizeEditor: true,
+        height: 320
+      });
+    });
+  </script>
+</body>
+</html>

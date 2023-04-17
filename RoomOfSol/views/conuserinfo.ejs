@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <title>관리자 - 회원 정보 조회</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter%3A200%2C300"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans%3A700"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR%3A100%2C300%2C400%2C700"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A100%2C200%2C300%2C400%2C700"/>
+  <link rel="stylesheet" href="/styles/conuserinfo.css"/>
+</head>
+<body>
+<div class="conuserinfo-Etp">
+  <div class="auto-group-tfqs-zNC">
+    <div class="footer-KvG">
+      <div class="footer-GKi">
+        <div class="div-zWc">개인정보처리방침</div>
+        <div class="div-P2x">
+          <img class="logo44-1-6CG" src="/assets/logo44-1-GJC.png"/>
+          <div class="address-QCx">
+            <div class="auto-group-ltgc-kGp">
+              <div class="item-31-15-34-6rU">광주 동구 예술길 31-15 3~4</div>
+              <div class="span-xtg">
+                <div class="item--Jhe">대표전화</div>
+                <div class="item-062-1234-5678-cTS">062-1234-5678 </div>
+              </div>
+            </div>
+            <div class="email-smartboothsolsbsolcom-Woi">email : smartboothsol@sbsol.com</div>
+            <div class="copyright-sb-sol-all-right-reserved-SBa">Copyright SB SOL. All Right Reserved.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="div-we8">회원 정보 조회</div>
+    <div class="table-D5r">
+      <div class="row-WKr">
+        <div class="cell-Rxc">
+          <div class="content-yUL">No</div>
+        </div>
+        <div class="cell-4Vn">
+          <div class="content-QpY">아이디</div>
+        </div>
+        <div class="cell-9vY">
+          <div class="content-J2k">성별 </div>
+        </div>
+        <div class="content-xsz">닉네임</div>
+        <div class="content-SHN">흡연 기간 (개월)</div>
+        <div class="content-8AC">일일 흡연량 (개피)</div>
+        <div class="content-1jn">비고</div>
+      </div>
+      <!-- 테이블 row 시작 -->
+      <% let index = 0; %>
+      <% for(const member of members) {%>
+        <% index += 1; %>
+        <div class="row-uaG">
+          <div class="cell-qip">
+            <div class="content-C3a"><%=index%></div>
+          </div>
+          <div class="cell-JMW">
+            <div class="cont_table"><%=member[0]%></div>
+          </div>
+          <div class="cell-g7A">
+            <div class="cont_table"><%=member[6]%></div>
+          </div>
+          <div class="cell-PGU">
+            <div class="cont_table"><%=member[2]%></div>
+          </div>
+          <div class="cell-LSc">
+            <div class="cont_table"><%=member[4]%></div>
+          </div>
+          <div class="cell-H6x">
+            <div class="cont_table"><%=member[5]%></div>
+          </div>
+          <div class="cell-dgc">
+            <div class="btn-z1N">삭제</div>
+          </div>
+        </div>
+      <%}%>
+      
+      <!-- 테이블 row 끝 -->
+    </div>
+    <div class="item--dcU">
+      <a href="/conmain"><img class="logo44-1-XSx" src="/assets/logo44-1-sRJ.png"/></a>
+      <div class="ul-EsA">
+        <a href="/conuserinfo" class="item--aw2">회원 정보 조회</a>
+        <a href="/conbcheck" class="item--HaY">부스 관리 &amp; 로그 확인</a>
+        <a href="/connboard" class="item--BA8">공지 게시판</a>
+        <a href="/conqboard" class="item--Hix">건의사항 </a>
+      </div>
+      <form action="/logout" method="get">
+      <button type="submit" class="item--Cqv">로그아웃</button>
+      </form>
+    </div>
+  </div>
+</div>
+</body>

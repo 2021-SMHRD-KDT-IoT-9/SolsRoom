@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <title>유저 - 부스 정보</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter%3A200%2C300"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto%3A500"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR%3A100%2C300%2C700"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A100%2C200%2C300%2C500%2C700"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans%3A700"/>
+  <link rel="stylesheet" href="/styles/userbcheck.css"/>
+</head>
+<body>
+<div class="userbcheck-Tep">
+  <div class="div-bW8">
+    
+    <!-- 헤더 반복 -->
+    <%- include('includes/userheader', {session:session})%>
+    <!-- 헤더 반복 -->
+
+    <div class="div-Syv">
+      <div class="div-zVe">부스 위치 &amp; 이용 현황</div>
+      <div class="div-HDr">
+        <div class="auto-group-8awc-eKJ">
+          <div class="item--oCC">위치 확인 및 이용 현황</div>
+          <!-- 지도관련 부분 -->
+          <div class="frame-35-5Qc">
+            <img class="rectangle-Qxg" src="/assets/rectangle.png"/>
+          </div>
+          <!-- 지도관련 부분 끝 -->
+        </div>
+        <div class="div-gQQ">
+          <div class="item--FCc">부스 상세 정보</div>
+          <div class="frame-33-vJk">
+            <div class="table-SXz">
+              <div class="row-ynp">
+                <div class="cell-wDr">
+                  <div class="content-4JU">부스명</div>
+                </div>
+                <div class="cell-YzL">
+                  <div class="content-Jic">주소</div>
+                </div>
+                <div class="cell-czC">
+                  <div class="content-LQQ">상태</div>
+                </div>
+                <div class="cell-45W">
+                  <div class="content-zUx">관리자 Email</div>
+                </div>
+              </div>
+              <!--
+
+              <div class="cell-gec">
+                <div class="status-RMJ">사용 가능</div>
+              </div>
+
+              <div class="cell-gec">
+                  <div class="status-w3N">사용중</div>
+              </div>
+
+              <div class="cell-gec">
+                  <div class="status-Wsr">수리중</div>
+              </div>
+              -->
+              <% for (const booth_info of boothInfo) { %>
+                <% let isUnderRepair = false; %>
+                <% for (const booth_log of boothLog) { %>
+                  <% if (booth_log[1] === booth_info[0] && booth_log[3] === '1') { %>
+                    <% isUnderRepair = true; %>
+                  <% } %>
+                <% } %>
+              <div class="row-tKS">
+                <div class="cell-19A">
+                  <div class="content-AGx"><%=booth_info[0]%></div>
+                </div>
+                <div class="cell-5ui">
+                  <div class="content-cPr"><%=booth_info[1]%></div>
+                </div>
+                <div class="cell-gec">
+                  <% if (isUnderRepair) {%>
+                    <div class="status-Wsr">수리중</div>
+                  <% } else { %>
+                    <div class="status-RMJ">사용 가능</div>
+                  <%}%>
+                </div>
+                <div class="cell-WNk">
+                  <div class="content-S1W"><%=booth_info[2]%></div>
+                </div>
+              </div>
+              <%}%>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- footer 반복 -->
+  <%- include('includes/userfooter') %>
+  <!-- footer 반복 -->
+
+</div>
+</body>

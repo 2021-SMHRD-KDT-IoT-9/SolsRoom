@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <title>유저 - 공지 게시판</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A100%2C300%2C500%2C700"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans%3A700"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto%3A500"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR%3A100%2C300%2C700"/>
+  <link rel="stylesheet" href="/styles/usernboard.css"/>
+</head>
+<body>
+<div class="usernboard-rCg">
+  <div class="div-zJt">
+
+    <!-- header 반복 -->
+    <%- include('includes/userheader', {session:session})%>
+    <!-- header 반복 -->
+
+
+    <div class="div-1hA">
+      <div class="div-Khr">공지 게시판</div>
+      <div class="table-zZ6">
+        <div class="tr-iEC">
+          <div class="th-UDN">글번호</div>
+          <div class="th-itQ">제목</div>
+          <div class="th-cit">작성자</div>
+          <div class="th-vzU">등록일</div>
+        </div>
+        <div class="tbodylistarea-Qek">
+          <!-- 테이블 row 시작 -->
+          <% let index = nboard.length+1;%>
+          <% for(const board of nboard) {%>
+          <% index -= 1;%>
+            <div class="auto-group-lbtn-96Y">
+              <div class="tr-HyS">
+                <div class="td-ogt"><%=index%></div>
+                <form action="/user_n_read/<%=board[0]%>" method="get">
+                <button class="td-hGU"  style="cursor: pointer;">
+                  <%=board[1]%>
+                </button>
+                </form>
+              </div>
+              <div class="td-1wN"><%=board[4]%></div>
+              <% 
+                board[3] = String(board[3]);
+                board[3] = board[3].substr(3, 21);
+              %>
+              <div class="td-8FJ">
+                <div class="span-tkG"><%=board[3]%></div>
+              </div>
+            </div>
+          <%}%>
+          <!-- 테이블 row 끝-->
+        </div>
+      </div>
+      <div class="numbtn">
+        <a href="#" class="bt first"><<</a>
+        <a href="#" class="bt prev"><</a>
+        <a href="#" class="num on">1</a>
+        <a href="#" class="num">2</a>
+        <a href="#" class="num">3</a>
+        <a href="#" class="num">4</a>
+        <a href="#" class="num">5</a>
+        <a href="#" class="bt next">></a>
+        <a href="#" class="bt last">>></a>
+      </div>
+      <div class="auto-group-nh9r-2J4">
+        <div class="item-1-mWY">
+          
+      </div>
+        <div class="div-Fgc">
+          <div class="auto-group-vop6-oi8">
+          </div>
+          <div class="auto-group-y8au-N2U">
+            <div class="selectstype-WeU">
+              <div class="div-yY4">
+                <select style="font-size: 18px;">
+                  <option>제목</option>
+                  <option>글쓴이</option>
+                </select>
+              </div>
+              <div class="selectstype-WeU-bg"></div>
+            </div>
+            <input type="text" class="inputstext-xPz">
+              <!-- <div class="divplaceholder-toS">검색어를 입력해주세요</div> -->
+            <div onclick="location.href='#';" class="button-YNC">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer 반복 -->
+    <%- include('includes/userfooter') %>
+    <!-- footer 반복 -->
+
+  </div>
+</div>
+</body>

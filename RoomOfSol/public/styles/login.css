@@ -1,0 +1,165 @@
+
+html {
+	font-size:62.5%;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+ul, li {
+	list-style: none;
+}
+input {
+	border: none;
+}
+body {
+  width: 192rem;
+}.login-BFe {
+  box-sizing: border-box;
+  padding: 19.9rem 76.5rem;
+  width: 100%;
+  height: 108rem;
+  overflow: hidden;
+  position: relative;
+  background-color: #ffffff;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url('../assets/login-bg.png');
+}
+.login-BFe .sign-in-Kck {
+  box-sizing: border-box;
+  padding: 5.9rem 2.4rem 12.1rem 2.4rem;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  border: solid 0.1rem #96dd5e;
+  background-color: rgba(228, 246, 223, 0.5699999928);
+  border-radius: 5rem;
+}
+.login-BFe .sign-in-Kck .kakaotalk2023032910591866106-3Hr {
+  margin-top: 3rem;
+  margin-bottom: 6rem;
+  width: 30.2rem;
+  height: 10rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.login-BFe .sign-in-Kck .auto-group-heu8-iun {
+  margin-bottom: 1.9rem;
+  box-sizing: border-box;
+  padding: 1.5rem 1.3rem 1.3rem 1.3rem;
+  width: 100%;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.26;
+  color: #555353;
+  font-family: Outfit, 'Source Sans Pro';
+  white-space: nowrap;
+  border: solid 0.15rem #96dd5e;
+  border-radius: 0.5rem;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+.login-BFe .sign-in-Kck .auto-group-rbeg-Q1v {
+  margin-bottom: 0.7rem;
+  box-sizing: border-box;
+  padding: 1.5rem 1.3rem 1.3rem 1.3rem;
+  width: 100%;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.26;
+  color: #555353;
+  font-family: Outfit, 'Source Sans Pro';
+  white-space: nowrap;
+  border: solid 0.15rem #96dd5e;
+  border-radius: 0.5rem;
+  flex-shrink: 0;
+}
+.login-BFe .sign-in-Kck .item--fTe {
+  margin: 0rem 0rem 3.3rem 23rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.26;
+  color: #141313;
+  font-family: Outfit, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.login-BFe .sign-in-Kck .auto-group-uydv-yDS {
+  margin-bottom: 5.9rem;
+  width: 100%;
+  height: 4.9rem;
+  font-size: 1.8rem;
+  font-weight: 900;
+  line-height: 1.26;
+  letter-spacing: 0.819rem;
+  color : black;
+  font-family: Outfit, 'Source Sans Pro';
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: solid 0.15rem #96dd5e;
+  box-sizing: border-box;
+  background-color: #cfffaa;
+  border-radius: 0.5rem;
+  flex-shrink: 0;
+  text-decoration:none;
+}
+.login-BFe .sign-in-Kck .item--zeL {
+  margin-right: 7.1rem;
+  cursor: pointer;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.26;
+  color: #555353;
+  font-family: Outfit, 'Source Sans Pro';
+  white-space: nowrap;
+  display: flex;
+  align-items: baseline;
+  flex-shrink: 0;
+}
+.login-BFe .sign-in-Kck .item--zeL .item--zeL-sub-0 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.26;
+  color: #333333;
+  font-family: Outfit, 'Source Sans Pro';
+}
+.login-BFe .sign-in-Kck .item--zeL .item--zeL-sub-1 {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.26;
+  color: #245126;
+  font-family: Outfit, 'Source Sans Pro';
+  margin-left : 25px;
+}
+
+.login-BFe .sign-in-Kck .item--zeL .item--zeL-sub-3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.26;
+  color: #333333;
+  font-family: Outfit, 'Source Sans Pro';
+  text-decoration:none;
+}
+.login-BFe .sign-in-Kck .item--zeL .item--zeL-sub-4 {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.26;
+  color: #333333;
+  font-family: Outfit, 'Source Sans Pro';
+}
+.login-BFe .sign-in-Kck .item--zeL .item--zeL-sub-5 {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.26;
+  color: #f8f4f4;
+  font-family: Outfit, 'Source Sans Pro';
+}

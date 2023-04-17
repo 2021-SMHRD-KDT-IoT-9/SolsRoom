@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <!-- 반복 -->
+  <meta charset="utf-8" />
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <title>유저 - 메인 페이지</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR%3A100%2C300%2C400"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A100%2C300%2C400"/>
+  <link rel="stylesheet" href="/styles/usermain.css"/>
+  <!-- 반복 끝 -->
+
+</head>
+<body>
+  <br>
+<div class="usermain-1Ap">
+  <div class="item--9Xv">
+    <div class="auto-group-1wwg-5gU">
+      <div class="auto-group-mzs6-cRW">
+        <div class="item--N9n">
+          <div onclick="location.href='/';" class="auto-group-6fv8-HGk">
+            <img class="item-1-1Te" src="/assets/-4ye.png"/>
+          </div>
+          <div class="ul-XB6">
+            <a href="/userhcheck" class="item--dE8">회원 건강 체크</a>
+            <a href="/userbcheck" class="item--7uz">부스 위치 &amp; 이용 현황</a>
+            <a href="/usernboard" class="item--21N">공지 게시판</a>
+            <a href="/userqboard" class="item--jwN">건의사항</a>
+            <a href="/userintro" class="item--F92">소개 &amp; 문의</a>
+        </div>
+          <% if(session.memberId === null){ %>					
+            <a href="/login" class="item--Wak">로그인</a>
+            <a href="/join" class="item--c7z">회원가입</a>
+					<% }else{ %>
+            <p class="item--Wak"><%=session.memberId %>님 접속 중</p>
+            <form action="/logout" method="get">
+            <button type="submit" class="logout_btn">로그아웃</button>
+          </form>
+          <%} %>
+        </div>
+      </div>
+      <div class="auto-group-swqx-jTW">
+        <div class="item--3UC">
+          <div class="item--kNc">스마트 흡연 부스</div>
+          <div class="item--fEg">
+          다양한 기능으로 청결하고 간편하게 
+          <br/>
+          서비스를 이용하실 수 있도록 노력하겠습니다.
+          </div>
+        </div>
+        <div class="auto-group-kt5j-JHe">
+          <img class="booth1-1-pFz" src="/assets/booth1-1.png"/>
+        </div>
+      </div>
+    </div>
+    <div class="item--ZUU">
+      <div class="ul-iMN">
+        <div onclick="location.href='/userhcheck'" class="a-5Sp">
+          <div class="item--27A">건강통계</div>
+          <div class="item--TiG">회원님의 건강 정보 통계, 챗봇을 제공하는 서비스</div>
+          <img class="icon-health-WRe" src="/assets/icon-health-EVv.png"/>
+        </div>
+        <div onclick="location.href='/userbcheck'" class="a-cDn">
+          <div class="item--iGp">위치확인</div>
+          <div class="item--c7J">부스 위치 확인과 이용 여부를 파악하는 서비스</div>
+          <img class="icon-flag-frG" src="/assets/icon-flag-BAG.png"/>
+        </div>
+        <div onclick="location.href='/usernboard'" class="a-oha">
+          <div class="item--8Ux">공지 게시판</div>
+          <div class="item--3M2">
+          시설, 서비스 관련<br>공지사항을 확인하세요.
+          </div>
+          <img class="icon-edit-2-Tfe" src="/assets/icon-edit-2-SZe.png"/>
+        </div>
+        <div onclick="location.href='/userqboard'" class="a-bG4">
+          <div class="item--9Ha">건의사항 </div>
+          <div class="item--qgC">
+          불편한 부분을 저희에게 알려주세요.
+          </div>
+          <img class="icon-notification-ssn" src="/assets/icon-notification-2Rn.png"/>
+        </div>
+        <div onclick="location.href='/userintro';" class="a-zhW">
+          <div class="item--wse">소개</div>
+          <div class="item--foe">
+          팀원과 시설을 소개합니다.
+          <br/>
+          
+          </div>
+          <img class="icon-group-Y6k" src="/assets/icon-group.png"/>
+        </div>
+      </div>
+    </div>
+    <div class="item--9Xv-bg">
+    </div>
+  </div>
+</div>
+</body>

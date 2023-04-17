@@ -1,0 +1,43 @@
+
+html {
+	font-size:62.5%;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+ul, li {
+	list-style: none;
+}
+input {
+	border: none;
+}
+body {
+  width: 12.1rem;
+}.component-1-D3v {
+  height: 7rem;
+  cursor: pointer;
+  box-sizing: border-box;
+  padding: 1rem;
+  width: 100%;
+
+  .btn-MJY {
+    font-weight: 700;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    border: solid 0.1rem rgba(0, 0, 0, 0.150000006);
+    box-sizing: border-box;
+    height: 100%;
+    line-height: 1.3625;
+    cursor: pointer;
+    font-family: Noto Sans, 'Source Sans Pro';
+    white-space: nowrap;
+    align-items: center;
+    background-color: #3ddd57;
+    width: 100%;
+    font-size: 2rem;
+    border-radius: 0.5rem;
+    text-align: center;
+  }
+}

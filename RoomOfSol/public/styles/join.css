@@ -1,0 +1,240 @@
+
+html {
+	font-size:62.5%;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+ul, li {
+	list-style: none;
+}
+input {
+	border: none;
+}
+body {
+  width: 192rem;
+}.join-M6p {
+  box-sizing: border-box;
+  padding: 9.9rem 76.5rem;
+  width: 100%;
+  height: 108rem;
+  overflow: hidden;
+  position: relative;
+  background-color: #ffffff;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url('../assets/join-bg.png');
+}
+.join-M6p .sign-in-USL {
+  box-sizing: border-box;
+  padding: 7rem 2.4rem 4.7rem 2.3rem;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  border: solid 0.1rem #96dd5e;
+  background-color: rgba(228, 246, 223, 0.5699999928);
+  border-radius: 5rem;
+}
+.join-M6p .sign-in-USL .kakaotalk2023032910591866106-Q56 {
+  margin: 0rem 0rem 6.1rem 0.1rem;
+  width: 30.2rem;
+  height: 10rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.join-M6p .sign-in-USL .frame-11-7VJ {
+  margin: 0rem 0rem 6.1rem 0.1rem;
+  width: 34.2rem;
+  row-gap: 1.6rem;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.join-M6p .sign-in-USL .frame-11-7VJ .frame-8-SGg {
+  box-sizing: border-box;
+  padding: 1.4rem 1.6rem;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.26;
+  color: #555353;
+  font-family: Outfit, 'Source Sans Pro';
+  white-space: nowrap;
+  border: solid 0.15rem #96dd5e;
+  border-radius: 0.5rem;
+  flex-shrink: 0;
+}
+.join-M6p .sign-in-USL .frame-11-7VJ .frame-9-X3E {
+  box-sizing: border-box;
+  padding: 1.4rem;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.26;
+  color: #555353;
+  font-family: Outfit, 'Source Sans Pro';
+  white-space: nowrap;
+  border: solid 0.15rem #96dd5e;
+  border-radius: 0.5rem;
+  flex-shrink: 0;
+}
+.join-M6p .sign-in-USL .frame-11-7VJ .frame-10-DAx {
+  box-sizing: border-box;
+  padding: 1.4rem 1.6rem;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.26;
+  color: #555353;
+  font-family: Outfit, 'Source Sans Pro';
+  white-space: nowrap;
+  border: solid 0.15rem #96dd5e;
+  border-radius: 0.5rem;
+  flex-shrink: 0;
+}
+.join-M6p .sign-in-USL .frame-11-7VJ .frame-8-pwS {
+  box-sizing: border-box;
+  padding: 1.4rem 1.6rem;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.26;
+  color: #555353;
+  font-family: Outfit, 'Source Sans Pro';
+  white-space: nowrap;
+  border: solid 0.15rem #96dd5e;
+  border-radius: 0.5rem;
+  flex-shrink: 0;
+}
+.join-M6p .sign-in-USL .frame-11-7VJ .frame-8-WJU {
+  box-sizing: border-box;
+  padding: 1.4rem 1.6rem;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.26;
+  color: #555353;
+  font-family: Outfit, 'Source Sans Pro';
+  white-space: nowrap;
+  border: solid 0.15rem #96dd5e;
+  border-radius: 0.5rem;
+  flex-shrink: 0;
+}
+.join-M6p .sign-in-USL .frame-11-7VJ .frame-8-yhr {
+  box-sizing: border-box;
+  padding: 1.4rem 1.6rem;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.26;
+  color: #555353;
+  font-family: Outfit, 'Source Sans Pro';
+  white-space: nowrap;
+  border: solid 0.15rem #96dd5e;
+  border-radius: 0.5rem;
+  flex-shrink: 0;
+}
+.join-M6p .sign-in-USL .frame-11-7VJ .frame-8-sYL {
+  box-sizing: border-box;
+  padding: 1.4rem 1.6rem;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.26;
+  color: #555353;
+  font-family: Outfit, 'Source Sans Pro';
+  white-space: nowrap;
+  border: solid 0.15rem #96dd5e;
+  border-radius: 0.5rem;
+  flex-shrink: 0;
+}
+.join-M6p .sign-in-USL .frame-6-xZn {
+  margin: 0rem 0.2rem 3.4rem 0rem;
+  width: 34.1rem;
+  height: 4.9rem;
+  overflow: hidden;
+  position: relative;
+  font-size: 1.8rem;
+  font-weight: 900;
+  line-height: 1.26;
+  letter-spacing: 0.819rem;
+  color: rgba(0, 0, 0, 0.8999999762);
+  font-family: Outfit, 'Source Sans Pro';
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: solid 0.15rem #96dd5e;
+  box-sizing: border-box;
+  background-color: #cfffaa;
+  border-radius: 0.5rem;
+  flex-shrink: 0;
+  text-decoration:none;
+  cursor:pointer;
+}
+.join-M6p .sign-in-USL .item--2Ze {
+  margin-right: 6.2rem;
+  cursor: pointer;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.26;
+  color: #555353;
+  font-family: Outfit, 'Source Sans Pro';
+  white-space: nowrap;
+  display: flex;
+  align-items: baseline;
+  flex-shrink: 0;
+}
+.join-M6p .sign-in-USL .item--2Ze .item--2Ze-sub-0 {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.26;
+  color: #245126;
+  font-family: Outfit, 'Source Sans Pro';
+}
+.join-M6p .sign-in-USL .item--2Ze .item--2Ze-sub-1 {
+}
+.join-M6p .sign-in-USL .item--2Ze .item--2Ze-sub-2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.26;
+  color: #333333;
+  font-family: Outfit, 'Source Sans Pro';
+  text-decoration:none;
+}
+.join-M6p .sign-in-USL .item--2Ze .item--2Ze-sub-3 {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.26;
+  color: #333333;
+  font-family: Outfit, 'Source Sans Pro';
+}
+.join-M6p .sign-in-USL .item--2Ze .item--2Ze-sub-4 {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.26;
+  color: #f8f4f4;
+  font-family: Outfit, 'Source Sans Pro';
+}

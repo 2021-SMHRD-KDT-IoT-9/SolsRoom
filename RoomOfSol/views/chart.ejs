@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
+<body>
+    <!-- html 에서 json 데이터를 먼저 저장  -->
+    <input type="hidden" id="healthData" value="<%= JSON.stringify(healthData) %>" />
+    <input type="hidden" id="avgHeartRate" value="<%= JSON.stringify(avgHeartRate) %>" />
+    <div id="chart_div" style="width: 1000px; height: 350px"></div>
+
+    <script>
+        function sortDataByDate(data) {
+            data.sort(function(a, b) {
+                const dateA = new Date(a.date);
+                const dateB = new Date(b.date);
+                return dateA - dateB;
+            });
+        }
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+        document.get
+        function drawChart() {
+        // 회원 건강 데이터 가져오기
+        var healthData = JSON.parse(document.getElementById("healthData").value);
+        var avgHeartRate = JSON.parse(document.getElementById("avgHeartRate").value);
+        sortDataByDate(healthData);
+        // 데이터 배열 생성
+        const data = new google.visualization.DataTable();
+        data.addColumn('string', '날짜');
+        data.addColumn('number', '심박수');
+        data.addColumn('number', '평균 심박수');
+        healthData.forEach((row) => {
+            const date = new Date(row.date);
+            const formattedDate = date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate();
+            data.addRow([formattedDate, row.heartRate, avgHeartRate]);
+        });
+        
+        // 차트 옵션 설정
+        const options = {
+            title: '회원 건강 데이터',
+            curveType: 'function', // 곡선 제거
+            legend: { position: 'bottom' },
+            vAxis: {
+                viewWindow: {
+                    min: 50, // y축 최소 값 설정
+                    max: 120, // y축 최대 값 설정
+                    gridlines: {
+                        count: 8 // y축 눈금 개수 설정
+                    }
+                }
+            },
+            series: { 
+                0: { // 첫번째 데이터 시리즈 (심박수)에 대한 옵션
+                    lineWidth: 1, // 심박수 데이터에 대한 선 굵기 설정
+                    color: 'blue' // 심박수 데이터에 대한 선 색상 설정
+                },
+                1: { // 두번째 데이터 시리즈 (평균 심박수)에 대한 옵션
+                    lineWidth: 1, // 평균 심박수 데이터에 대한 선 굵기 설정
+                    color: 'green', // 평균 심박수 데이터에 대한 선 색상 설정
+                    visibleInLegend: true // 평균 심박수 데이터에 대한 범례 표시 제거
+                }
+            }
+        };
+        // 차트 생성 및 그리기
+        const chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+        }
+    </script>
+</body>
+</html>

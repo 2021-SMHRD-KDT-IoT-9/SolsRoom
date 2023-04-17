@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <title>관리자 - 부스 정보</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR%3A100%2C300%2C400%2C700"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A100%2C200%2C300%2C400%2C500%2C700"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter%3A200%2C300"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto%3A500"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans%3A700"/>
+  <link rel="stylesheet" href="/styles/conbcheck.css"/>
+</head>
+<body>
+<div class="conbcheck-crc">
+
+    <!-- header 반복 -->
+    <%- include('includes/conheader') %>
+    <!-- header 반복 -->
+
+
+  <div class="div-CVN">
+    <div class="div-iic">
+      <div class="div-5ZA">부스 위치 &amp; 로그 확인</div>
+      <div class="auto-group-5uxn-yPe">
+        <div class="div-6z4">
+          <div class="item--Fc4">부스 상세 정보</div>
+          <div class="frame-33-wzg">
+            <div class="table-4ZW">
+              <div class="row-bpL">
+                <div class="cell-MHi">
+                  <div class="content-tYY">부스명</div>
+                </div>
+                <div class="cell-NCp">
+                  <div class="content-7RJ">주소</div>
+                </div>
+                <div class="cell-pKi">
+                  <div class="content-Zo6">상태</div>
+                </div>
+                <div class="cell-U9N">
+                  <div class="content-DMr">시설 관리자 Email</div>
+                </div>
+              </div>
+              
+              <!-- 테이블 row 시작 -->
+              <!--
+                <div class="cell-XQU">
+                  <div class="status-U4p">사용 가능</div>
+                </div>
+
+                <div class="cell-XQU">
+                  <div class="status-faY">사용중</div>
+                </div>
+
+                <div class="cell-XQU">
+                  <div class="status-zHN">수리중</div>
+                </div>
+              -->
+
+              <% for (const booth_info of boothInfo) { %>
+                <% let isUnderRepair = false; %>
+                <% for (const booth_log of boothLog) { %>
+                  <% if (booth_log[1] === booth_info[0] && booth_log[3] === '1') { %>
+                    <% isUnderRepair = true; %>
+                  <% } %>
+                <% } %>
+                <div class="row-Ju6">
+                  <div class="cell-T1J">
+                    <div class="content-CDn"><%=booth_info[0]%></div>
+                  </div>
+                  <div class="cell-Jnc">
+                    <div class="content-2yW"><%=booth_info[1]%></div>
+                  </div>
+                  <div class="cell-XQU">
+                    <% if (isUnderRepair) { %>
+                      <div class="status-zHN">수리중</div>
+                    <% } else { %>
+                      <div class="status-U4p">사용 가능</div>
+                    <% } %>
+                  </div>
+                  <div class="cell-LMv">
+                    <div class="content-UDE"><%=booth_info[2]%></div>
+                  </div>
+                </div>
+              <% } %>
+              
+              <!-- 테이블 row 끝 -->
+
+            </div>
+          </div>
+        </div>
+        <div class="button-s-40-vSU">
+          <div class="button-eNU">
+            <div onclick="location.href='/conaddbooth'" class="label-zSL">부스 추가</div>
+          </div>
+        </div>
+        <div class="div-6EU">
+          <div class="item--3vQ">로그 확인</div>
+          <div class="frame-33-9iY">
+            <div class="table-GHN">
+              <div class="row-CB2">
+                <div class="cell-96G">
+                  <div class="content-VR2">부스명</div>
+                </div>
+                <div class="cell-zcg">
+                  <div class="content-jaG">위치</div>
+                </div>
+                <div class="cell-qdJ">
+                  <div class="content-noS">고장 일시</div>
+                </div>
+                <div class="cell-HkC">
+                  <div class="content-RLc">시설 관리자 Email</div>
+                </div>
+                <div class="cell-iqW">
+                  <div class="content-Gc8">Email 전송</div>
+                </div>
+              </div>
+              
+              <!-- 로그확인 테이블 row 시작 -->
+
+              <% for(const booth_log of boothLog) {%>
+                <% for (const booth_info of boothInfo) {%>
+                  <% if (booth_info[0] === booth_log[1] && booth_log[3] === '1') {%>
+                <div class="row-ASc">
+                  <div class="cell-76x">
+                    <div class="content-FU4"><%=booth_log[1]%></div>
+                  </div>
+                  <div class="cell-Zje">
+                    
+                    <div class="content-W96"><%=booth_info[1]%></div>
+                  </div>
+                  <%booth_log[2] = String(booth_log[2])
+                    booth_log[2] = booth_log[2].substr(3, 21);
+                  %>
+                  <div class="cell-za4"><%=booth_log[2]%></div>
+                  <div class="cell-hDa">
+                    <div class="content-dsv"><%=booth_info[2]%></div>
+                  </div>
+                  <form action="/sendmail/<%=booth_info[2]%>" method="post">
+                  <div class="cell-wNp">
+                    <button type="submit" class="btn-tor">전송</button>
+                  </div>
+                  </form>
+                </div>
+                <%}%>
+                <%}%>
+              <%}%>
+              
+              <!-- 테이블 row 끝 -->
+              
+              </div> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+        <!-- footer 반복 -->
+        <%- include('includes/confooter') %>
+        <!-- footer 반복 -->
+
+</div>
+</body>
+</html>

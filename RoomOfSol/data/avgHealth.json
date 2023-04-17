@@ -1,0 +1,38 @@
+{
+    "male": {
+        "age_range": [
+            {"min": 18, "max": 25},
+            {"min": 26, "max": 35},
+            {"min": 36, "max": 45},
+            {"min": 46, "max": 55},
+            {"min": 56, "max": 65},
+            {"min": 65, "max": null}
+        ],
+        "avg_heart_rate": [
+            {"avg_rate": 50.5},
+            {"avg_rate": 55.2},
+            {"avg_rate": 60.1},
+            {"avg_rate": 65.3},
+            {"avg_rate": 70.8},
+            {"avg_rate": 75.4}
+        ]
+    },
+    "female": {
+        "age_range": [
+            {"min": 18, "max": 25},
+            {"min": 26, "max": 35},
+            {"min": 36, "max": 45},
+            {"min": 46, "max": 55},
+            {"min": 56, "max": 65},
+            {"min": 65, "max": null}
+        ],
+        "avg_heart_rate": [
+            {"avg_rate": 53.7},
+            {"avg_rate": 58.4},
+            {"avg_rate": 63.2},
+            {"avg_rate": 68.5},
+            {"avg_rate": 73.1},
+            {"avg_rate": 78.6}
+        ]
+    }
+}
