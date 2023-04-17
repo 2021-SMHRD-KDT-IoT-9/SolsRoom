@@ -1,2 +1,0 @@
-# SolsRoom
-Team_SolsRoom 
