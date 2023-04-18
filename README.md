@@ -1,9 +1,8 @@
-<!DOCTYPE html>
 ---
-team_솔의룸
+<br>
+<div>♦️team_솔의룸</div>
 
-<div style="text-align:center">
-# 스마트 흡연부스
-</div>
 
----
+<div align="right">핵심프로젝트</div>
+<h1></h1>
+
