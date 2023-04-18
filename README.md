@@ -10,9 +10,6 @@
 <p>아두이노를 기반으로 흡연부스 내부의 기계장치를 제어하고 흡연부스에 설치된 센서(심박수,산소포화도센서,가스센서 등)의 값을 wifi통신을통해 web에서 활용하여 사용자 및 관리자에게 서비스를제공
 </p>
 <h3>사용 스택</h3>
-
-
-
 <p>
 <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML">
 <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS">
@@ -27,7 +24,20 @@
 <img src="https://img.shields.io/badge/Google%20Charts-4285F4?style=flat-square&logo=google-charts&logoColor=white" alt="Google Charts">
 <p>
 <h3>개발 목표</h3>
-  
+<div style="max-width: 600px;">
+  <table style="border-collapse: collapse;">
+    <tr>
+      <th style="background-color: gray; border: 1px solid white; padding: 10px;">흡연부스 (H/W)</th>
+      <th style="background-color: gray; border: 1px solid white; padding: 10px;">사용자서비스</th>
+      <th style="background-color: gray; border: 1px solid white; padding: 10px;">관리자서비스</th>
+    </tr>
+    <tr>
+      <td style="background-color: lightgrey; border: 1px solid white; padding: 10px;">스노우화이트</td>
+      <td style="background-color: lightgrey; border: 1px solid white; padding: 10px;">스노우화이트</td>
+      <td style="background-color: lightgrey; border: 1px solid white; padding: 10px;">스노우화이트</td>
+    </tr>
+  </table>
+</div>
 <h3>개발 내용</h3>
  <h4>IoT(H/W) 설계 흐름도</h4>
   <img src="readme_img/HW흐름도.png">
