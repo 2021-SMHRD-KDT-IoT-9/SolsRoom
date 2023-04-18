@@ -2,8 +2,8 @@
 ---
 team_솔의룸
 
-<center>
-# 가운데 정렬된 굵은 글씨
-</center>
+<div style="text-align:center">
+# 스마트 흡연부스
+</div>
 
 ---
