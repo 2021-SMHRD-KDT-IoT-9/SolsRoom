@@ -1,6 +1,6 @@
 ---
 team_솔의룸
 
-%n%n%n%n%n%n%n#스마트 훕연부스
+#<center>스마트 흡연부스</center>
 
 ---
